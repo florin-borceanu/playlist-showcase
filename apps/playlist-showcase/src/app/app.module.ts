@@ -1,15 +1,17 @@
 import { APP_INITIALIZER, NgModule } from '@angular/core';
+import { ApplicationTitleService, ThemeService } from '@utils/services';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { themeFactory, translateHttpLoaderFactory } from '@utils/factories';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { ThemeService } from '@utils/services';
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [AppComponent],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -30,4 +32,6 @@ import { ThemeService } from '@utils/services';
     },
   ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(public applicationTitleService: ApplicationTitleService) {}
+}

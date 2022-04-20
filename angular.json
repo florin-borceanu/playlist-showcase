@@ -1,7 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "dashboard": "libs/dashboard",
     "playlist-showcase": "apps/playlist-showcase",
+    "shell": "libs/shell",
     "types": "libs/types",
     "utils": "libs/utils"
   }

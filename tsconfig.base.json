@@ -10,24 +10,16 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2017",
-      "dom"
-    ],
+    "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@types": [
-        "libs/types/src/index.ts"
-      ],
-      "@utils/*": [
-        "libs/utils/src/lib/*"
-      ]
+      "@dashboard": ["libs/dashboard/src/index.ts"],
+      "@shell": ["libs/shell/src/index.ts"],
+      "@types": ["libs/types/src/index.ts"],
+      "@utils/*": ["libs/utils/src/lib/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }
