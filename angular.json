@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "playlist-showcase": "apps/playlist-showcase"
+    "playlist-showcase": "apps/playlist-showcase",
+    "types": "libs/types",
+    "utils": "libs/utils"
   }
 }
