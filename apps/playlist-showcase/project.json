@@ -1,0 +1,100 @@
+{
+  "projectType": "application",
+  "root": "apps/playlist-showcase",
+  "sourceRoot": "apps/playlist-showcase/src",
+  "prefix": "playlist-showcase",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/playlist-showcase",
+        "index": "apps/playlist-showcase/src/index.html",
+        "main": "apps/playlist-showcase/src/main.ts",
+        "polyfills": "apps/playlist-showcase/src/polyfills.ts",
+        "tsConfig": "apps/playlist-showcase/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/playlist-showcase/src/favicon.ico",
+          "apps/playlist-showcase/src/assets"
+        ],
+        "styles": [
+          "apps/playlist-showcase/src/styles.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/playlist-showcase/src/environments/environment.ts",
+              "with": "apps/playlist-showcase/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "playlist-showcase:build:production"
+        },
+        "development": {
+          "browserTarget": "playlist-showcase:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "playlist-showcase:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/playlist-showcase/src/**/*.ts",
+          "apps/playlist-showcase/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/playlist-showcase"
+      ],
+      "options": {
+        "jestConfig": "apps/playlist-showcase/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
