@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
 import { LocalStorageKeys, THEME_BODY_CLASS, ThemeMode } from '@types';
 import { BehaviorSubject } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 
 @Injectable({ providedIn: 'root' })
@@ -55,8 +55,4 @@ export class ThemeService {
   private addBodyThemeClass(theme: ThemeMode): void {
     document.body.classList.add(THEME_BODY_CLASS[theme]);
   }
-}
-
-export function themeFactory(themeService: ThemeService): () => void {
-  return () => themeService.setThemeOnStart();
 }
