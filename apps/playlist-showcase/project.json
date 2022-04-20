@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/playlist-showcase",
         "index": "apps/playlist-showcase/src/index.html",
@@ -20,9 +18,7 @@
           "apps/playlist-showcase/src/favicon.ico",
           "apps/playlist-showcase/src/assets"
         ],
-        "styles": [
-          "apps/playlist-showcase/src/styles.scss"
-        ],
+        "styles": ["apps/playlist-showcase/src/styles/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -87,9 +83,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/playlist-showcase"
-      ],
+      "outputs": ["coverage/apps/playlist-showcase"],
       "options": {
         "jestConfig": "apps/playlist-showcase/jest.config.js",
         "passWithNoTests": true
