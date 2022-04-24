@@ -18,6 +18,7 @@
       "@core/data-access": ["libs/core/data-access/src/index.ts"],
       "@core/feature": ["libs/core/feature/src/index.ts"],
       "@core/types": ["libs/core/types/src/index.ts"],
+      "@environment": ["apps/playlist-showcase/src/environment/environment.ts"],
       "@playlist/data-access": ["libs/playlist/data-access/src/index.ts"],
       "@playlist/feature": ["libs/playlist/feature/src/index.ts"],
       "@playlist/types": ["libs/playlist/types/src/index.ts"],

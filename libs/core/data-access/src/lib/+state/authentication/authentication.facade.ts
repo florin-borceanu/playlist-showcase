@@ -22,7 +22,7 @@ export class AuthenticationFacade {
     AuthenticationSelectors.userDetails
   );
 
-  constructor(public store: Store<AuthenticationState>) {}
+  constructor(private store: Store<AuthenticationState>) {}
 
   public dispatchLogin(): void {
     this.store.dispatch(AuthenticationActions.login());
