@@ -16,12 +16,13 @@ const routes: Routes = [
     canActivateChild: [IsAuthenticatedGuard],
     children: [
       {
-        path: CoreMainRoutes.DASHBOARD,
-        loadChildren: () => import('@dashboard').then((m) => m.DashboardModule),
+        path: CoreMainRoutes.PLAYLIST,
+        loadChildren: () =>
+          import('@playlist/feature').then((m) => m.PlaylistFeatureModule),
       },
       {
         path: '',
-        redirectTo: CoreMainRoutes.DASHBOARD,
+        redirectTo: CoreMainRoutes.PLAYLIST,
         pathMatch: 'full',
       },
     ],

@@ -1,0 +1,18 @@
+{
+  "projectType": "library",
+  "root": "libs/playlist/types",
+  "sourceRoot": "libs/playlist/types/src",
+  "prefix": "playlist-showcase",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playlist/types/src/**/*.ts",
+          "libs/playlist/types/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

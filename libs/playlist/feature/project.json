@@ -1,14 +1,14 @@
 {
   "projectType": "library",
-  "root": "libs/dashboard",
-  "sourceRoot": "libs/dashboard/src",
+  "root": "libs/playlist/feature",
+  "sourceRoot": "libs/playlist/feature/src",
   "prefix": "playlist-showcase",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/dashboard"],
+      "outputs": ["coverage/libs/playlist/feature"],
       "options": {
-        "jestConfig": "libs/dashboard/jest.config.js",
+        "jestConfig": "libs/playlist/feature/jest.config.js",
         "passWithNoTests": true
       }
     },
@@ -16,8 +16,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "libs/dashboard/src/**/*.ts",
-          "libs/dashboard/src/**/*.html"
+          "libs/playlist/feature/src/**/*.ts",
+          "libs/playlist/feature/src/**/*.html"
         ]
       }
     }

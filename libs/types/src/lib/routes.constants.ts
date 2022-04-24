@@ -1,4 +1,4 @@
 export enum CoreMainRoutes {
-  DASHBOARD = 'dashboard',
+  PLAYLIST = 'playlist',
   LOGIN = 'login',
 }

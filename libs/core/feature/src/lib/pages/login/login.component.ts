@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CoreMainRoutes } from '@types';
-import { filter, Observable, tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { LoginData, LoginService } from './login.service';
 
 @Component({
@@ -12,10 +12,9 @@ import { LoginData, LoginService } from './login.service';
 })
 export class LoginComponent {
   public data$: Observable<LoginData> = this.loginService.data$.pipe(
-    tap((isAuthenticated) => {
-      console.log(isAuthenticated);
+    tap(({ isAuthenticated }) => {
       if (isAuthenticated) {
-        this.router.navigate([CoreMainRoutes.DASHBOARD]);
+        this.router.navigate([CoreMainRoutes.PLAYLIST]);
       }
     })
   );

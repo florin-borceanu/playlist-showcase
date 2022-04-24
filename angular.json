@@ -4,8 +4,10 @@
     "core-data-access": "libs/core/data-access",
     "core-feature": "libs/core/feature",
     "core-types": "libs/core/types",
-    "dashboard": "libs/dashboard",
+    "playlist-data-access": "libs/playlist/data-access",
+    "playlist-feature": "libs/playlist/feature",
     "playlist-showcase": "apps/playlist-showcase",
+    "playlist-types": "libs/playlist/types",
     "types": "libs/types",
     "utils": "libs/utils"
   }
