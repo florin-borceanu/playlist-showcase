@@ -1,9 +1,11 @@
 {
   "version": 2,
   "projects": {
+    "core-data-access": "libs/core/data-access",
+    "core-feature": "libs/core/feature",
+    "core-types": "libs/core/types",
     "dashboard": "libs/dashboard",
     "playlist-showcase": "apps/playlist-showcase",
-    "shell": "libs/shell",
     "types": "libs/types",
     "utils": "libs/utils"
   }

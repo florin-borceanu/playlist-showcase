@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/core/data-access",
+  "sourceRoot": "libs/core/data-access/src",
+  "prefix": "playlist-showcase",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/core/data-access"],
+      "options": {
+        "jestConfig": "libs/core/data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/core/data-access/src/**/*.ts",
+          "libs/core/data-access/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

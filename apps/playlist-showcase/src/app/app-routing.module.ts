@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('@shell').then((m) => m.ShellModule),
+    loadChildren: () =>
+      import('@core/feature').then((m) => m.CoreFeatureModule),
   },
   {
     path: '**',

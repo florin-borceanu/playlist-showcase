@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@core/data-access": ["libs/core/data-access/src/index.ts"],
+      "@core/feature": ["libs/core/feature/src/index.ts"],
+      "@core/types": ["libs/core/types/src/index.ts"],
       "@dashboard": ["libs/dashboard/src/index.ts"],
-      "@shell": ["libs/shell/src/index.ts"],
       "@types": ["libs/types/src/index.ts"],
       "@utils/*": ["libs/utils/src/lib/*"]
     }

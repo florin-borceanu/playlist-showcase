@@ -1,4 +1,4 @@
-export enum ShellMainRoutes {
+export enum CoreMainRoutes {
   DASHBOARD = 'dashboard',
   LOGIN = 'login',
 }
