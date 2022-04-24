@@ -1,1 +1,9 @@
-Playlist main component
+<ng-container *ngIf="data$ | async as data; else showLoading">
+  <ng-container *ngIf="!data.isLoading; else showLoading">
+    <span *ngFor="let playlist of data.playlists">
+      {{ playlist.name }}
+    </span>
+  </ng-container>
+</ng-container>
+
+<ng-template #showLoading></ng-template>
