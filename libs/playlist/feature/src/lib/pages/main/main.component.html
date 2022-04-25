@@ -1,5 +1,8 @@
 <ng-container *ngIf="data$ | async as data; else showLoading">
-  <playlist-list [list]="data.playlists"></playlist-list>
+  <playlist-list
+    *ngIf="!data.isLoading; else showLoading"
+    [list]="data.playlists"
+  ></playlist-list>
 </ng-container>
 
 <ng-template #showLoading>

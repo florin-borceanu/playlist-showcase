@@ -1,4 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostBinding,
+  Input,
+} from '@angular/core';
 import { Playlist } from '@playlist/types';
 
 @Component({
@@ -9,4 +14,8 @@ import { Playlist } from '@playlist/types';
 })
 export class PlaylistCardComponent {
   @Input() playlist: Playlist;
+
+  @HostBinding('style.background-image') public get backgroundImage(): string {
+    return `url(${this.playlist?.artwork})`;
+  }
 }

@@ -3,6 +3,8 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 1rem;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 .playlist {
