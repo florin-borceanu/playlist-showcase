@@ -1,9 +1,5 @@
 <ng-container *ngIf="data$ | async as data; else loading">
-  <ng-container *ngIf="!data.isLoading; else loading">
-    <h1>Login</h1>
-
-    <button (click)="login()">Click here</button>
-  </ng-container>
+  <button *ngIf="!data.isLoading; else loading" (click)="login()">Login</button>
 </ng-container>
 
 <ng-template #loading> Loading ... </ng-template>

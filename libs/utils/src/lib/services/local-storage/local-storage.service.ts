@@ -12,4 +12,8 @@ export class LocalStorageService {
 
     return result ? JSON.parse(result) : undefined;
   }
+
+  public removeItem(key: LocalStorageKeys): void {
+    localStorage.removeItem(key);
+  }
 }

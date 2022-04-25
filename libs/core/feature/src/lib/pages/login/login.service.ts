@@ -18,6 +18,10 @@ export class LoginService {
 
   constructor(private authenticationFacade: AuthenticationFacade) {}
 
+  public dispatchCheckLogin(): void {
+    this.authenticationFacade.dispatchCheckLogin();
+  }
+
   public dispatchLogin(): void {
     this.authenticationFacade.dispatchLogin();
   }

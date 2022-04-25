@@ -21,23 +21,41 @@ export const initialState: AuthenticationState = {
 
 const authenticationReducer = createReducer(
   initialState,
-  on(AuthenticationActions.login, (state) => ({
-    ...state,
-    isLoading: true,
-  })),
-  on(AuthenticationActions.loginSuccess, (state, { userDetails }) => ({
-    ...state,
-    isAuthenticated: true,
-    isLoading: false,
-    userDetails,
-  })),
+  on(
+    AuthenticationActions.login,
+    AuthenticationActions.logout,
+    AuthenticationActions.checkLogin,
+    (state) => ({
+      ...state,
+      isLoading: true,
+    })
+  ),
+  on(
+    AuthenticationActions.loginSuccess,
+    AuthenticationActions.checkLoginSuccess,
+    (state, { userDetails }) => ({
+      ...state,
+      isAuthenticated: true,
+      isLoading: false,
+      userDetails,
+    })
+  ),
   on(AuthenticationActions.loginFailure, (state, { error }) => ({
     ...state,
     isLoading: false,
     error,
   })),
-  on(AuthenticationActions.logout, () => ({
-    ...initialState,
+  on(
+    AuthenticationActions.logoutSuccess,
+    AuthenticationActions.checkLoginFailure,
+    () => ({
+      ...initialState,
+    })
+  ),
+  on(AuthenticationActions.logoutFailure, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error,
   }))
 );
 

@@ -1,4 +1,9 @@
-import { CanActivate, Router, UrlTree } from '@angular/router';
+import {
+  CanActivate,
+  CanActivateChild,
+  Router,
+  UrlTree,
+} from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { CoreMainRoutes } from '@types';
@@ -21,9 +26,5 @@ export class IsNotAuthenticatedGuard implements CanActivate {
         return true;
       })
     );
-  }
-
-  public canActivateChild(): Observable<boolean | UrlTree> {
-    return this.canActivate();
   }
 }

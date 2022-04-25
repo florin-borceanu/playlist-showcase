@@ -24,6 +24,10 @@ export class AuthenticationFacade {
 
   constructor(private store: Store<AuthenticationState>) {}
 
+  public dispatchCheckLogin(): void {
+    this.store.dispatch(AuthenticationActions.checkLogin());
+  }
+
   public dispatchLogin(): void {
     this.store.dispatch(AuthenticationActions.login());
   }
