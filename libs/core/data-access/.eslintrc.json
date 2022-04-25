@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "playlist-showcase",
+            "prefix": "core",
             "style": "kebab-case"
           }
         ]

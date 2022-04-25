@@ -8,6 +8,7 @@
     "playlist-feature": "libs/playlist/feature",
     "playlist-showcase": "apps/playlist-showcase",
     "playlist-types": "libs/playlist/types",
+    "shared": "libs/shared",
     "types": "libs/types",
     "utils": "libs/utils"
   }

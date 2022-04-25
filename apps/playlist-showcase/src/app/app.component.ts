@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService, UrlService } from '@utils/services';
 import { ThemeMode } from '@types';
-import { ThemeService } from '@utils/services/theme';
-import { UrlService } from '@utils/services/url';
 import { environment } from '../environments/environment';
 
 @Component({

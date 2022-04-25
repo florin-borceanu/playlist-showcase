@@ -1,0 +1,17 @@
+:host {
+  background-color: var(--core-white);
+  border: 0.25rem solid var(--core-black);
+  border-bottom-color: var(--core-white);
+  border-left-color: var(--core-white);
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  width: 2rem;
+
+  &.dark {
+    background-color: var(--core-black);
+    transform: rotate(180deg);
+  }
+}
