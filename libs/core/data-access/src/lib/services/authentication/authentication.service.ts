@@ -1,8 +1,7 @@
-import { delay, Observable, of } from 'rxjs';
+import { Observable, delay, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { LocalStorageKeys } from '@types';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { LocalStorageService } from '@utils/services';
+import { LocalStorageService } from '@utils/services/local-storage';
 import { UserDetails } from '@core/types';
 
 @Injectable({ providedIn: 'root' })

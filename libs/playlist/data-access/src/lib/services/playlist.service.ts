@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PlaylistResponse } from '@playlist/types';
-import { UrlService } from '@utils/services';
+import { UrlService } from '@utils/services/url';
 import { Urls } from '@types';
 
 @Injectable({ providedIn: 'root' })

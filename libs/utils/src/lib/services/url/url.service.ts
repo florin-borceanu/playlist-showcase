@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Urls } from '@types';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { environment } from 'apps/playlist-showcase/src/environments/environment';
 
 interface Url {
   dev: string;
@@ -17,7 +15,13 @@ const urlMapping: Record<Urls, Url> = {
 
 @Injectable({ providedIn: 'root' })
 export class UrlService {
+  private isProduction = false;
+
   public getUrl(url: Urls) {
-    return urlMapping[url][environment.production ? 'prod' : 'dev'];
+    return urlMapping[url][this.isProduction ? 'prod' : 'dev'];
+  }
+
+  public toggleProduction(): void {
+    this.isProduction = !this.isProduction;
   }
 }
