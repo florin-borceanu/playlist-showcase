@@ -1,5 +1,14 @@
 :host {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: 1rem;
+}
+
+.playlist {
+  &__loading {
+    align-items: center;
+    display: flex;
+    height: 100%;
+  }
 }
