@@ -1,0 +1,10 @@
+<ng-container *ngIf="list?.length; else showEmpty">
+  <playlist-card
+    *ngFor="let playlist of list; trackBy: playlistId"
+    [playlist]="playlist"
+  ></playlist-card>
+</ng-container>
+
+<ng-template #showEmpty>
+  {{ 'playlists.emptyMessage' | translate }}
+</ng-template>

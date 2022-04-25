@@ -1,9 +1,5 @@
 <ng-container *ngIf="data$ | async as data; else showLoading">
-  <ng-container *ngIf="!data.isLoading; else showLoading">
-    <span *ngFor="let playlist of data.playlists">
-      {{ playlist.name }}
-    </span>
-  </ng-container>
+  <playlist-list [list]="data.playlists"></playlist-list>
 </ng-container>
 
 <ng-template #showLoading>

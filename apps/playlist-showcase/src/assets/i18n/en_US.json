@@ -6,5 +6,8 @@
     "disable": "Disable",
     "login": "Login",
     "logout": "Logout"
+  },
+  "playlists": {
+    "emptyMessage": "No playlists available :("
   }
 }
