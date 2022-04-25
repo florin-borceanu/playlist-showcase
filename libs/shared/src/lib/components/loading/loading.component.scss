@@ -16,6 +16,14 @@
       background-color: rgba(var(--themed-white-rgb), 0.6);
     }
 
+    &--static {
+      background-color: rgba(var(--core-black-rgb), 0.6);
+
+      &--reverse {
+        background-color: rgba(var(--core-white-rgb), 0.6);
+      }
+    }
+
     &:nth-child(2n + 1) {
       animation-delay: 0.3s;
     }

@@ -28,6 +28,13 @@ export class LoadingComponent {
     this._isReverse = coerceBooleanProperty(isReverse);
   }
   private _isReverse: boolean;
+  @Input() public get isStaticColor(): boolean {
+    return this._isStaticColor;
+  }
+  public set isStaticColor(value: BooleanInput) {
+    this._isStaticColor = coerceBooleanProperty(value);
+  }
+  private _isStaticColor: boolean;
 
   public uniqueIdentifier(index: number): number {
     return index;
