@@ -1,5 +1,13 @@
-<ng-container *ngIf="data$ | async as data; else loading">
-  <button *ngIf="!data.isLoading; else loading" (click)="login()">Login</button>
-</ng-container>
+<main class="login-container">
+  <ng-container *ngIf="data$ | async as data; else showLoading">
+    <h1>{{ 'application.title' | translate }}</h1>
 
-<ng-template #loading> Loading ... </ng-template>
+    <button *ngIf="!data.isLoading; else showLoading" (click)="login()">
+      {{ 'common.login' | translate }}
+    </button>
+  </ng-container>
+
+  <ng-template #showLoading>
+    <shared-loading></shared-loading>
+  </ng-template>
+</main>

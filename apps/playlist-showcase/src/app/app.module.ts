@@ -12,7 +12,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { ThemeService } from '@utils/services/theme';
 import { environment } from '../environments/environment';
-import { SharedModule } from 'libs/shared/src';
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -22,7 +21,6 @@ import { SharedModule } from 'libs/shared/src';
     BrowserModule,
     HttpClientModule,
     EffectsModule.forRoot([]),
-    SharedModule,
     StoreModule.forRoot(routerReducer, {
       runtimeChecks: {
         strictStateImmutability: true,

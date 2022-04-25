@@ -1,5 +1,9 @@
 {
+  "application": {
+    "title": "Playlist Showcase"
+  },
   "common": {
-    "disable": "Disable"
+    "disable": "Disable",
+    "login": "Login"
   }
 }

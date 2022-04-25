@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  gap: 1rem;
+}
+
+.loading {
+  &__dot {
+    animation: jump 0.6s infinite alternate-reverse ease-in-out;
+    background-color: rgba(var(--themed-black-rgb), 0.6);
+    border-radius: 50%;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+
+    &--reverse {
+      background-color: rgba(var(--themed-white-rgb), 0.6);
+    }
+
+    &:nth-child(2n + 1) {
+      animation-delay: 0.3s;
+    }
+  }
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(1rem);
+  }
+}

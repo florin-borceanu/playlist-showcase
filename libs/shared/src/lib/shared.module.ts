@@ -1,10 +1,13 @@
+import { LoadingComponent, ThemeSelectorComponent } from './components';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ThemeSelectorComponent } from './components';
+import { TranslateModule } from '@ngx-translate/core';
+
+const declarations = [LoadingComponent, ThemeSelectorComponent];
 
 @NgModule({
-  declarations: [ThemeSelectorComponent],
+  declarations: [...declarations],
   imports: [CommonModule],
-  exports: [ThemeSelectorComponent],
+  exports: [...declarations, TranslateModule],
 })
 export class SharedModule {}

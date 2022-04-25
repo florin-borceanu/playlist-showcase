@@ -3,6 +3,7 @@ import { MainComponent } from './pages';
 import { NgModule } from '@angular/core';
 import { PlaylistDataAccessModule } from '@playlist/data-access';
 import { PlaylistFeatureRoutingModule } from './playlist-feature-routing.module';
+import { SharedModule } from '@shared';
 
 @NgModule({
   declarations: [MainComponent],
@@ -10,6 +11,7 @@ import { PlaylistFeatureRoutingModule } from './playlist-feature-routing.module'
     CommonModule,
     PlaylistDataAccessModule,
     PlaylistFeatureRoutingModule,
+    SharedModule,
   ],
 })
 export class PlaylistFeatureModule {}
