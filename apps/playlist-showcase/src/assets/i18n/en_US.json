@@ -4,6 +4,7 @@
   },
   "common": {
     "disable": "Disable",
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   }
 }

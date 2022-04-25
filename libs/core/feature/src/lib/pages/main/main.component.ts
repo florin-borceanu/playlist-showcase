@@ -1,25 +1,28 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationFacade } from '@core/data-access';
 import { CoreMainRoutes } from '@types';
+import { PlaylistService } from './main.service';
 
 @Component({
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [PlaylistService],
 })
 export class MainComponent implements OnInit {
+  public data$ = this.playlistService.data$;
+
   constructor(
-    private authenticationFacade: AuthenticationFacade,
-    private router: Router
+    private router: Router,
+    private playlistService: PlaylistService
   ) {}
 
   public ngOnInit(): void {
-    this.authenticationFacade.dispatchCheckLogin();
+    this.playlistService.dispatchCheckLogin();
   }
 
   public logout(): void {
-    this.authenticationFacade.dispatchLogout();
+    this.playlistService.dispatchLogout();
     this.router.navigate([CoreMainRoutes.LOGIN]);
   }
 }

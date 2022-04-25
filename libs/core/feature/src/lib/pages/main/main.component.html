@@ -1,3 +1,11 @@
-<button (click)="logout()">Logout</button>
+<ng-container *ngIf="data$ | async as data; else showLoading">
+  <core-nav [user]="data.userDetails" (onLogout)="logout()"></core-nav>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #showLoading>
+  <main class="main__loading">
+    <shared-loading></shared-loading>
+  </main>
+</ng-template>

@@ -1,0 +1,10 @@
+<nav class="main__navigation">
+  <h1 class="main__navigation__title">Playlists.</h1>
+
+  <span class="main__navigation__actions">
+    <shared-user-details *ngIf="user" [user]="user" (click)="logout()">
+    </shared-user-details>
+
+    <shared-theme-selector></shared-theme-selector>
+  </span>
+</nav>

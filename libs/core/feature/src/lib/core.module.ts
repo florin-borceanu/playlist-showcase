@@ -4,14 +4,15 @@ import { NgModule } from '@angular/core';
 import { CoreRoutingModule } from './core-routing.module';
 import { CoreDataAccessModule } from '../../../data-access/src';
 import { SharedModule } from 'libs/shared/src';
+import { NavComponent } from './components';
 
 @NgModule({
+  declarations: [LoginComponent, MainComponent, NavComponent],
   imports: [
     CommonModule,
     CoreDataAccessModule,
     CoreRoutingModule,
     SharedModule,
   ],
-  declarations: [LoginComponent, MainComponent],
 })
 export class CoreFeatureModule {}

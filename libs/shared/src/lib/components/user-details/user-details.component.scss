@@ -1,0 +1,14 @@
+:host {
+  align-items: center;
+  display: flex;
+}
+
+.user-details {
+  &__photo {
+    border: 0.25rem solid var(--themed-white);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+  }
+}
