@@ -31,3 +31,5 @@
 - Polish the playlist list layout
 - Increase accessibility of the app (the first level is easily achievable)
 - Add [commitizen](https://github.com/commitizen/cz-cli)
+- Adding the utils for unit tests (such as page/wrapper pattern, CommonTestModule)
+- Unit testing
