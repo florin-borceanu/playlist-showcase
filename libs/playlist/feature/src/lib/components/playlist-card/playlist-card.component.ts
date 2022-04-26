@@ -15,7 +15,19 @@ import { Playlist } from '@playlist/types';
 export class PlaylistCardComponent {
   @Input() playlist: Playlist;
 
-  @HostBinding('style.background-image') public get backgroundImage(): string {
-    return `url(${this.playlist?.artwork})`;
+  @HostBinding('style.background-color') public get colorByText(): string {
+    let hash = 0;
+
+    for (let i = 0; i < this.playlist?.name.length; i++) {
+      hash = this.playlist?.name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    let result = '#';
+    for (let i = 0; i < 3; i++) {
+      const value = (hash >> (i * 8)) & 0xff;
+      result += ('00' + value.toString(16)).substr(-2);
+    }
+
+    return result;
   }
 }

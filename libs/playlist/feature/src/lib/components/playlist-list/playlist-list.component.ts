@@ -13,4 +13,8 @@ export class PlaylistListComponent {
   public playlistId(_: number, playlist: Playlist): string {
     return playlist.id;
   }
+
+  public redirectToPlaylist(url: string): void {
+    window.location.href = url;
+  }
 }

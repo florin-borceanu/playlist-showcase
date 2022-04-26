@@ -1,9 +1,7 @@
-<span class="playlist__header">
-  <h1 class="playlist__text">{{ playlist.name }}</h1>
-</span>
+<img [src]="playlist?.artwork" class="playlist__artwork" />
 
 <span class="playlist__details">
-  <h3 class="playlist__text">{{ playlist.curator_name }}</h3>
+  <h1 class="playlist__text">{{ playlist?.name }}</h1>
 
-  <a [href]="playlist.url" target="blank">Listen now!</a>
+  <h3 class="playlist__text">{{ playlist?.curator_name }}</h3>
 </span>

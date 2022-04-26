@@ -2,6 +2,7 @@
   <playlist-card
     *ngFor="let playlist of list; trackBy: playlistId"
     [playlist]="playlist"
+    (click)="redirectToPlaylist(playlist.url)"
   ></playlist-card>
 </ng-container>
 
